@@ -1,0 +1,299 @@
+body{
+    background: #EFF6FF;
+    font-family: 'Abel', sans-serif;
+    color: #2A4A5C;
+    box-sizing: border-box
+}
+
+h1{
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+p{
+    color: #AFAFAF;
+    font-weight: 400;
+}
+
+hr{
+    width: 100%;
+    background: #ccc;
+    height: 1px;
+    border: none;
+}
+
+.choice-title{
+    margin: 10px;
+    color: #ccc;
+    font-weight: bold;
+}
+
+input {
+    width: 45%;
+    height: 50px;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    outline: none;
+    overflow: hidden;
+}
+
+.line{
+    border-left: 2px solid #00BFFF;
+}
+
+button{
+    width: 45%;
+    height: 50px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    user-select: none;
+}
+
+button:hover{
+    transition: 1s;
+    background: #ccc;
+}
+
+button img{
+    width: 30px;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.btn_facebook{
+    background: #255A9B;
+}
+
+.btn_linkedin{
+    background: #0076B6;
+}
+
+.btn_create__account{
+    background: #3698FB;
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+
+.page{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    overflow: hidden;
+    -webkit-box-shadow: -2px 0px 10px -3px #727272; 
+    box-shadow: -2px 0px 10px -3px #727272;
+}
+
+.container{
+    height: 745px;
+    width: 50%;
+}
+
+.banner{
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo{
+    width: 30%;
+    padding: 10px 0 0 15px;
+}
+
+.content{
+    background: #FFF;    
+}
+.content-page{
+    margin: auto;
+    width: 80%;
+}
+
+.content-page_registration, .content-page_option{
+    display: flex;
+    justify-content:space-between;
+    /* сверху | справа | снизу | слева */
+    margin: 30px 0 30px 0;
+}
+
+.choice{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+}
+
+.tabs input[type=radio] {
+    display: none;
+}
+
+
+.tabs>label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 40px;
+    line-height: 25px;
+    user-select: none;
+}
+.tabs>label:before {
+    content: "";
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background: #fff;
+    border: 1px solid #AFAFAF;
+    border-radius: 50%;
+
+}
+
+label{
+    color: #000000;
+    font-weight: bold;
+}
+
+.tabs input[type=radio]:checked + label:before {
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border: 5px solid #00BFFF;
+}
+
+.tabs>div {
+    display: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-top: 30px;
+    box-shadow: 0 0 10px 5px rgb(243, 240, 240);
+    width: 40%;
+    height: 60px;
+    color: #AFAFAF;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3,
+#tab-btn-4:checked~#content-4{
+    display: block;
+}
+
+.agree {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    color: #e0e0e0;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.agree a{
+    color: #2196F3;
+}
+
+.agree input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 2px;
+}
+
+.agree:hover input ~ .checkmark {
+    background-color: #fff;
+}
+
+.agree input:checked ~ .checkmark {
+    background-color: #2196F3;
+
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.agree input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.agree .checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*media-css*/
+@media screen and (max-width: 1200px) {
+    .banner{
+        display: none;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .tabs>label, .content-page_registration{
+        display: block;
+    }
+
+    button, .tabs>div, .content-page_registration input{
+        width: 100%;
+    }
+
+    .content-page_registration button:last-child{
+        margin-top: 10px;
+    }
+
+    .content-page_registration input:last-child{
+        margin-top: 10px;
+    }
+
+    .container, .page{
+        height: 100vh;
+        overflow-x: auto;
+    }
+
+    .btn_create__account{
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
